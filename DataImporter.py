@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 from scipy.fft import fft, ifft, fftfreq
 import seaborn as sb
 
+
 class DataImporter:
 
     def __init__(self):
@@ -12,19 +13,28 @@ class DataImporter:
     def get_filename(self, person_number, activity):
         return f'wristandthigh/0{person_number}_{activity}.csv'
 
+    def get_data(self, person_number, activity):
+        path = self.get_filename(person_number, activity)
+        data = pd.read_csv(path, names=['s1', 's2', 's3', 's4', 's5', 's6'])
+        print(
+            f"loaded: PERSON={person_number}, ACTIVITY={activity}")
+        return data
+
     def get_data_and_print(self, person_number, activity):
         path = self.get_filename(person_number, activity)
         data = pd.read_csv(path, names=['s1', 's2', 's3', 's4', 's5', 's6'])
-        print(f"---------------PERSON:{person_number}, ACTIVITY={activity}---------------")
+        print(
+            f"---------------PERSON:{person_number}, ACTIVITY={activity}---------------")
         self.print_data_basics(data)
-        self.draw_values(data, range(500), f"sensor values for person {person_number} while {activity}")
+        self.draw_values(data, range(
+            500), f"sensor values for person {person_number} while {activity}")
 
         # fourier-transform
         used_records_num = len(data['s1'])
-        fft_data = pd.DataFrame(fft(data), columns=['s1', 's2', 's3', 's4', 's5', 's6'])
-        self.draw_fft_values(np.abs(fft_data), f"Fourier transformed sensor data for person {person_number} while {activity}")
-
-
+        fft_data = pd.DataFrame(
+            fft(data), columns=['s1', 's2', 's3', 's4', 's5', 's6'])
+        self.draw_fft_values(np.abs(
+            fft_data), f"Fourier transformed sensor data for person {person_number} while {activity}")
 
     def print_data_basics(self, data):
         print(data.head())
