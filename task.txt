@@ -1,0 +1,24 @@
+Zestaw danych zawiera dane 9 klas aktywności; 
+6 zajęć ruchowych oraz 3 zajęcia siedzące, 
+wykonywane przez 33 uczestników.
+
+Dane są rejestrowane za pomocą dwóch trójosiowych 
+akcelerometrów próbkujących z zegarem 100 Hz, 
+zamontowanych na dominujący nadgarstek i udo uczestnika. 
+
+Nazwa pliku zawiera numer uczestnika oraz nazwę aktywności.
+Każdy plik posiada 6 kolumn:
+1   -- wartość x nadgarstka
+2   -- wartość y nadgarstka
+3   -- wartość z nadgarstka
+4   -- wartość x uda
+5   -- wartość y uda
+6   -- wartość z uda
+
+Wartość minimalna: 	-8
+Wartość maksymalna: +8
+
+Podział zbioru:
+zbiór treningowy            -- 22 uczestników (026-053)
+zbiór testowy (opcjonalny)  -- 5 uczestników (054-058)
+zbiór walidacyjny (oceny)   -- 6 uczestników (059-063)
