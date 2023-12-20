@@ -16,8 +16,8 @@ class DataImporter:
     def get_data(self, person_number, activity):
         path = self.get_filename(person_number, activity)
         data = pd.read_csv(path, names=['s1', 's2', 's3', 's4', 's5', 's6'])
-        print(
-            f"loaded: PERSON={person_number}, ACTIVITY={activity}")
+        #print(
+        #    f"loaded: PERSON={person_number}, ACTIVITY={activity}")
         return data
 
     def get_data_and_print(self, person_number, activity):
