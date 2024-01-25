@@ -1,0 +1,72 @@
+n2: 0.95 loss po 25 epokach
+n3 (stare): 0.93 loss po 30
+n3 (nowe): 1.24 loss po ??? (rate=1e-1)
+n4: 1.20  (rate=2e-2)
+
+NOWE:
+learning rate = 1e-3
+batch=64
+unless otherwise
+n_01 test_acc=66% 300-200-100-len(out)
+6 * 5s co 10
+self.inputs_from_person = 25
+validation = Accuracy: 65.9%, Avg loss: 0.963309
+sieć może być przeuczona
+
+n_02:
+    ta samo jak n_02.pt
+    Accuracy: 64.4%, Avg loss: 0.993763
+
+n_03:
+    1200-600-100-len(out)
+    6 * 20s co 10
+    self.inputs_from_person = 25
+    Test Error:
+    Accuracy: 60.0%, Avg loss: 1.152195
+
+n_04:
+tak samo jak n_03
+Test Error:
+ Accuracy: 61.0%, Avg loss: 1.080772
+
+n_05:
+    n_01 300-200-100-len(out)
+    6 * 5s co 10
+    self.inputs_from_person = len / 100 na activity
+ Accuracy: 74.9%, Avg loss: 0.707495
+
+ n_06:
+ n_01 300-200-100-len(out)
+ FFT abs
+    6 * 5s co 10
+    self.inputs_from_person = 25
+ Test Error:
+ Accuracy: 83.6%, Avg loss: 0.425067
+
+  n_07:
+  FFT abs
+  n_01 300-200-100-len(out)
+    6 * 5s co 10
+    self.inputs_from_person = 250
+    Test Error:
+     Accuracy: 83.8%, Avg loss: 0.422257
+
+   n_08:
+   FFT abs
+   1200-600-300-100-len(out)
+   self.inputs_from_person = 250
+    6 * 20s co 10
+   test set = 87%+
+   Test Error:
+    Accuracy: 84.0%, Avg loss: 0.430526
+
+       n_09:
+   FFT real+imag
+   1200-600-300-100-len(out)
+    6 * 5s co 10
+
+   Test Error:
+
+
+
+
